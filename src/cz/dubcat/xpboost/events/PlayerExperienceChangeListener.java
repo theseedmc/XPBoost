@@ -48,15 +48,6 @@ public class PlayerExperienceChangeListener implements Listener {
 
         if (expnew > 0) {
             event.setAmount(expnew);
-            MainAPI.debug("Player " + player.getName() + " got " + expnew + " XP instead of " + exp + " XP ("
-                    + CONDITION_NAME + ")", Debug.NORMAL);
-
-            String message = XPBoostMain.getLang().getString("lang.doublexpnot").replaceAll("%newexp%", String.valueOf(expnew))
-                    .replaceAll("%oldexp%", String.valueOf(exp));
-            
-            if(XPBoostMain.getPlugin().getConfig().getBoolean("settings.enableVanillaExperienceGainedMessage")) {
-                XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-            }
         }
     }
 }

@@ -49,14 +49,6 @@ public class Heroes implements Listener {
 
         if (expnew > 0) {
             event.setExpGain(expnew);
-
-            if (XPBoostMain.getPlugin().getConfig().getBoolean("settings.heroes.msg.enabled")) {
-                String message = XPBoostMain.getPlugin().getConfig().getString("settings.heroes.msg.msg");
-                message = message.replaceAll("%newexp%", String.valueOf(expnew));
-                message = message.replaceAll("%oldexp%", String.valueOf(exp));
-                message = message.replaceAll("%source%", String.valueOf(skill));
-                XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-            }
         }
 
     }

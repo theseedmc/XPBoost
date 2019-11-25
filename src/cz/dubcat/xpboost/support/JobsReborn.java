@@ -49,14 +49,6 @@ public class JobsReborn implements Listener {
 
         if (newExp > 0) {
             event.setExp(newExp);
-
-            if (XPBoostMain.getPlugin().getConfig().getBoolean("settings.jobs.msg.enabled")) {
-                String message = XPBoostMain.getPlugin().getConfig().getString("settings.jobs.msg.msg");
-                message = message.replaceAll("%newexp%", String.valueOf(newExp));
-                message = message.replaceAll("%oldexp%", String.valueOf(exp));
-                message = message.replaceAll("%job%", job);
-                XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-            }
         }
     }
 

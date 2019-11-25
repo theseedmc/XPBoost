@@ -1,5 +1,5 @@
 name: ${project.name}
-author: milkwalk
+author: milkwalk, Airee
 version: ${project.version}
 main: cz.dubcat.xpboost.XPBoostMain
 commands:
@@ -7,7 +7,7 @@ commands:
         description: Main command.
         aliases: [xpb]
         permission: xpboost.use
-        permission-message: '§cYou do not have permission to use this command'
+        permission-message: '§c§lERROR: §7No permission.'
 permissions:
     xpboost.use:
         description: Allows you to use the plugin

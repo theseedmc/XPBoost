@@ -73,14 +73,6 @@ public class McMMO implements Listener {
             expbug = true;
             ExperienceAPI.addXP(player, enumSkillname, expnew, "UNKNOWN");
             expbug = false;
-
-            if (plugin.getConfig().getBoolean("settings.mcmmo.msg.enabled")) {
-                String message = plugin.getConfig().getString("settings.mcmmo.msg.msg");
-                message = message.replaceAll("%newexp%", expnew + "");
-                message = message.replaceAll("%oldexp%", exp + "");
-                message = message.replaceAll("%skill%", skillName);
-                XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-            }
         }
     }
 

@@ -44,12 +44,6 @@ public class MyPet implements Listener {
         
         if(newExp > 0) {
             e.setExp(newExp);
-            if (XPBoostMain.getPlugin().getConfig().getBoolean("settings.mypet.msg.enabled")) {
-                String message = XPBoostMain.getPlugin().getConfig().getString("settings.mypet.msg.msg");
-                message = message.replaceAll("%newexp%", String.valueOf(newExp));
-                message = message.replaceAll("%oldexp%", String.valueOf(exp));
-                XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-            }
         }
     }
 }

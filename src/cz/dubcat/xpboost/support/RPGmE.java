@@ -48,16 +48,6 @@ public class RPGmE implements Listener {
 
         if (expnew > 0) {
             e.setExp(expnew);
-
-            if (!skill.equals("STAMINA")) {
-                if (XPBoostMain.getPlugin().getConfig().getBoolean("settings.rpgme.msg.enabled")) {
-                    String message = XPBoostMain.getPlugin().getConfig().getString("settings.rpgme.msg.msg");
-                    message = message.replaceAll("%newexp%", expnew + "");
-                    message = message.replaceAll("%oldexp%", exp + "");
-                    message = message.replaceAll("%skill%", skill + "");
-                    XPBoostMain.getPlugin().getExperienceNotifier().experienceGainedNotification(player, message);
-                }
-            }
         }
     }
 }
